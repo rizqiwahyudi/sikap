@@ -58,7 +58,7 @@ jobs:
           npm run dev
       - name: Database Migrate
         run: |
-          php artisan migrate:fresh --seed
+          php artisan migrate:fresh --seed --force
       - name: Run Testsuite
         run: vendor/bin/phpunit
       - name: Check the duplicate code in app directory
