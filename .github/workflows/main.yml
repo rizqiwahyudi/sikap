@@ -14,14 +14,35 @@ jobs:
     container:
       image: kirschbaumdevelopment/laravel-test-runner:7.4
     
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres
+        # Provide the password for postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          # The hostname used to communicate with the PostgreSQL service container
+          POSTGRES_HOST: postgres
+          # The default PostgreSQL port
+          POSTGRES_PORT: 5432
+          POSTGRES_DB: test
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    
     steps:
       - uses: actions/checkout@v2
       - name: Install composer dependencies
         run: |
           composer install --no-scripts
-      - name: Copy .env.example to .env
+      - name: Copy .env.ci to .env
         run: |
-          cp .env.example .env
+          cp .env.ci .env
       - name: Generate Key
         run: |
           php artisan key:generate
@@ -35,13 +56,9 @@ jobs:
         run: |
           npm install
           npm run dev
-      - name: Create Database
-        env:
-          DB_CONNECTION: sqlite
-          DB_DATABASE: database/database.sqlite
+      - name: Database Migrate
         run: |
-          mkdir -p database
-          touch database/database.sqlite
+          php artisan migrate:fresh --seed
       - name: Run Testsuite
         run: vendor/bin/phpunit
       - name: Check the duplicate code in app directory
