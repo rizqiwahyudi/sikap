@@ -47,3 +47,5 @@ jobs:
           npm run dev
       - name: Run Testsuite
         run: vendor/bin/phpunit tests/
+      - name: Check the duplicate code in app directory
+        run: ./vendor/bin/phpcpd app/ --min-lines=5 --min-tokens=10
