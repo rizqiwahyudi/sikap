@@ -8,7 +8,7 @@
 <br><br>
 
 <p align="center">
-    <img src="https://github.com/rizqiwahyudi/sikap/workflows/Laravel/badge.svg" alt="Build Status">
+    <img src="https://github.com/rizqiwahyudi/sikap/workflows/Build/badge.svg" alt="Build Status">
 </p>
 <br><br>
 
