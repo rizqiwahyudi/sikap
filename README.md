@@ -7,7 +7,10 @@
 </p>
 <br><br>
 
-[![Actions Status](https://github.com/rizqiwahyudi/sikap/workflows/Laravel/badge.svg)](https://github.com/rizqiwahyudi/sikap/actions)
+<p align="center">
+    <img src="https://github.com/rizqiwahyudi/sikap/workflows/Laravel/badge.svg" alt="Build Status">
+</p>
+<br><br>
 
 # How To Use
 To use this App is very simple, you must run a simple syntax in terminal or command prompt.
