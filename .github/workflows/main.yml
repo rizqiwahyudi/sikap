@@ -14,22 +14,14 @@ jobs:
     container:
       image: kirschbaumdevelopment/laravel-test-runner:7.4
     
-    env:
-      DB_DATABASE: test
-      DB_USER: root
-      DB_PASSWORD: password
-    
     steps:
       - uses: actions/checkout@v2
       - name: Install composer dependencies
         run: |
           composer install --no-scripts
-      - name: Copy .env.ci to .env
+      - name: Copy .env.example to .env
         run: |
-          cp .env.ci .env
-      - name: Set Up MySQL
-        run: |
-          sudo /etc/init.d/mysql start
+          cp .env.example .env
       - name: Generate Key
         run: |
           php artisan key:generate
@@ -43,7 +35,14 @@ jobs:
         run: |
           npm install
           npm run dev
+      - name: Create Database
+        run: |
+          mkdir -p database
+          touch database/database.sqlite
       - name: Run Testsuite
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/database.sqlite
         run: vendor/bin/phpunit
       - name: Check the duplicate code in app directory
         run: ./vendor/bin/phpcpd app/ --min-lines=5 --min-tokens=10
