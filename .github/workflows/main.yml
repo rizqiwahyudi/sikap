@@ -30,7 +30,6 @@ jobs:
       - name: Set Up MySQL
         run: |
           sudo /etc/init.d/mysql start
-          mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
       - name: Generate Key
         run: |
           php artisan key:generate
