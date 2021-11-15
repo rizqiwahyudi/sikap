@@ -7,6 +7,11 @@
 </p>
 <br><br>
 
+<p align="center">
+    <img src="https://github.com/rizqiwahyudi/sikap/workflows/Build/badge.svg" alt="Build Status">
+</p>
+<br><br>
+
 # How To Use
 To use this App is very simple, you must run a simple syntax in terminal or command prompt.
 
