@@ -56,8 +56,6 @@ jobs:
         run: |
           npm install
           npm run dev
-      - name: Check the duplicate code in migrations directory
-        run: ./vendor/bin/phpcpd database/migrations/ --min-lines=2 --min-tokens=10
       - name: Database Migrate
         run: |
           php artisan migrate:fresh --seed --force
@@ -65,5 +63,3 @@ jobs:
         run: vendor/bin/phpunit
       - name: Check the duplicate code in app directory
         run: ./vendor/bin/phpcpd app/ --min-lines=5 --min-tokens=10
-      - name: Check the duplicate code in routes directory
-        run: ./vendor/bin/phpcpd routes/ --min-lines=2 --min-tokens=10
