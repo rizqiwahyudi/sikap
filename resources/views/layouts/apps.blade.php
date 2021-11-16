@@ -12,7 +12,7 @@
     <title>@yield('title')</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('sb-admin2/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -21,7 +21,7 @@
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
       <!-- Custom styles for this page -->
-    <link href="{{ asset('vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('sb-admin2/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +64,7 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{route ('company.index')}}">
+                <a class="nav-link" href="">
                     <i class="fas fa-store-alt"></i>
                     <span>Company</span></a>
               
@@ -72,14 +72,14 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{route ('departement.index')}}">
+                <a class="nav-link" href="">
                     <i class="far fa-building"></i>
                     <span>Departement</span></a>
               
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="{{route ('user.index')}}">
+                <a class="nav-link" href="">
                     <i class="fas fa-users"></i>
                     <span>User</span></a>
               
@@ -159,7 +159,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
                                 <img class="img-profile rounded-circle"
-                                    src="{{ asset('img/undraw_profile.svg') }}">
+                                    src="">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -183,7 +183,7 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div class="container">
                             <div class="col-md-5">
-                                @include('flash-message')
+                                
                             </div>
                                 @yield('content')
                         </div>
@@ -229,32 +229,37 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ route('logout') }}">Logout</a>
+                    <a class="btn btn-primary" href="{{ route('logout') }}" 
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">Logout</a>
                 </div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('sb-admin2/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('sb-admin2/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('sb-admin2/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
 
     <!-- Page level plugins -->
-    <script src="{{ asset('vendor/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset('sb-admin2/chart.js/Chart.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
     <script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('js/demo/chart-pie-demo.js') }}"></script>
 
     <!-- Page level plugins -->
-    <script src="{{ asset('vendor/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('sb-admin2/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('sb-admin2/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
      <!-- Page level custom scripts -->
      <!-- <script src="{{ asset('js/demo/datatables-demo.js') }}"></script> -->
