@@ -45,10 +45,10 @@ php artisan storage:link
 ```
 php artisan migrate
 ```
-<!-- or You can make the seed with the following command <b>(RECOMMENDED)</b> :
+or You can make the seed with the following command <b>(RECOMMENDED)</b> :
 ```
 php artisan migrate --seed
-``` -->
+```
 
 > **NOTE : Make sure the web server and database are turned on before migration command**
 
