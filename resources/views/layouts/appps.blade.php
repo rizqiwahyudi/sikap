@@ -65,8 +65,10 @@
                                     <div class="navbar-nav ml-auto">
                                         <a href="" class="nav-item nav-link active">Home</a>
                                         <a href="" class="nav-item nav-link">About Us</a>
-                                        <a href="" class="nav-item nav-link">List Kp</a>
+                                        <a href="" class="nav-item nav-link">Services</a>
+                                        <a href="" class="nav-item nav-link">FAQ</a>
                                         <a href="" class="nav-item nav-link">Contact Us</a>
+                                        <a href="" class="nav-item nav-link">List Kp</a>
                                         <a href="https://drive.google.com/drive/folders/1Fr4qr748Mni6OcPy5LmBim7PQiNbJDF3?usp=sharing"class="btn"><i class="fa fa-download"></i>Download Now</a>
                                     </div>
                                 </div>
@@ -76,7 +78,7 @@
                 </div>
             </div>
             <!-- Header End -->
-
+            @yield('content')
             <!-- Call to Action Start -->
             <div class="call-to-action">
                 <div class="container">
