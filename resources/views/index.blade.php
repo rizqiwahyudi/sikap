@@ -3,11 +3,11 @@
 
 @section('content')
  <!-- Hero Start -->
-<div class="#home">
+<div class="hero">
    <div class="container-fluid">
       <div class="row align-items-center">
          <div class="col-md-6">
-            <h2>Sistem Infromasi</h2>
+            <h2>Sistem Informasi</h2>
             <h2><span>Kerja Praktek</span> PENS</h2>
             <p>SIKAP PENS merupakan portal berita mengenai Keja Praktek khusus bagi mahasiswa pens</p>
             <!-- <a class="btn" href="">Download Now</a> -->
@@ -22,7 +22,7 @@
 
 
 <!-- About Start -->
-<div class="#about">
+<div class="about">
    <div class="container-fluid">
       <div class="row align-items-center">
          <div class="col-md-6">
@@ -72,7 +72,7 @@
 </div>
 <!-- About End -->
 <!-- Story Start -->
-<div class="#story">
+<div class="story">
     <div class="container-fluid">
         <div class="section-header">
             <h2>PROCEDURE BEFORE PRACTICAL WORK</h2>
@@ -365,7 +365,7 @@
 </div>
 <!-- Team End -->
 <!-- FAQs Start -->
-<div class="#faqs">
+<div class="faqs">
    <div class="container-fluid">
       <div class="row align-items-center">
          <div class="col-md-6">
@@ -430,7 +430,7 @@
 </div>
 <!-- FAQs End -->
 <!-- Contact Start -->
-<div class="#contact">
+<div class="contact">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
