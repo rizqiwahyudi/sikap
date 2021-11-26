@@ -63,12 +63,12 @@
 
                                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                     <div class="navbar-nav ml-auto">
-                                        <a href="" class="nav-item nav-link active">Home</a>
-                                        <a href="" class="nav-item nav-link">About Us</a>
-                                        <a href="" class="nav-item nav-link">Services</a>
-                                        <a href="" class="nav-item nav-link">FAQ</a>
-                                        <a href="" class="nav-item nav-link">Contact Us</a>
-                                        <a href="" class="nav-item nav-link">List Kp</a>
+                                        <a href="{{ route('index') }}" class="nav-item nav-link active">Home</a>
+                                        <a href="#about" class="nav-item nav-link">About Us</a>
+                                        <a href="#procedure" class="nav-item nav-link">Procedures</a>
+                                        <a href="#team" class="nav-item nav-link">Team</a>
+                                        <a href="#faq" class="nav-item nav-link">FAQ</a>
+                                        <a href="#contact" class="nav-item nav-link">Contact Us</a>
                                         <a href="https://drive.google.com/drive/folders/1Fr4qr748Mni6OcPy5LmBim7PQiNbJDF3?usp=sharing"class="btn"><i class="fa fa-download"></i>Download Now</a>
                                     </div>
                                 </div>

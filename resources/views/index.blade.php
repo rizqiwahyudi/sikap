@@ -1,5 +1,4 @@
-@extends('layouts.appps')
-@section('title','index')
+@extends('layouts.landingPage')
 
 @section('content')
  <!-- Hero Start -->
@@ -22,7 +21,7 @@
 
 
 <!-- About Start -->
-<div class="about">
+<div class="about" id="about">
    <div class="container-fluid">
       <div class="row align-items-center">
          <div class="col-md-6">
@@ -72,7 +71,7 @@
 </div>
 <!-- About End -->
 <!-- Story Start -->
-<div class="story">
+<div class="story" id="procedure">
     <div class="container-fluid">
         <div class="section-header">
             <h2>PROCEDURE BEFORE PRACTICAL WORK</h2>
@@ -98,7 +97,7 @@
                                         <i class="fa fa-book"></i>
                                     </div>
                                     <div class="story-text">
-                                        <h3>step one</h3>
+                                        <h3>first step</h3>
                                         <p>Mahasiswa mencari tempat Kerja Praktek</p>
                                     </div>
                                 </div>
@@ -115,7 +114,7 @@
                                         <i class="fa fa-business-time"></i>
                                     </div>
                                     <div class="story-text">
-                                        <h3>step two</h3>
+                                        <h3>second step</h3>
                                         <p>Mahasiswa membuat proposal dan surat pengantar KP untuk diajukan pada koordinator KP</p>
                                     </div>
                                     <div class="story-icon d-md-block d-none">
@@ -138,7 +137,7 @@
                                         <i class="fa fa-business-time"></i>
                                     </div>
                                     <div class="story-text">
-                                        <h3>step three</h3>
+                                        <h3>third step</h3>
                                         <p>Koordinator KP memverifikasi proposal dan surat pengantar KP untuk di ttd KaProdi dan KaDep</p>
                                     </div>
                                 </div>
@@ -155,7 +154,7 @@
                                         <i class="fa fa-cogs"></i>
                                     </div>
                                     <div class="story-text">
-                                        <h3>step four</h3>
+                                        <h3>fourth step</h3>
                                         <p>Mahasiswa mengirim proposal dan surat pengantar ke tempat KP atau via email</p>
                                     </div>
                                     <div class="story-icon d-md-block d-none">
@@ -178,7 +177,7 @@
                                         <i class="fa fa-running"></i>
                                     </div>
                                     <div class="story-text">
-                                        <h3>step five</h3>
+                                        <h3>fifth step</h3>
                                         <p>Mahasiswa menunggu konfirmasi dari tempat KP, sambil mengisikan data KP di http://mis.pens.ac.id bagian Kerja Praktek</p>
                                     </div>
                                 </div>
@@ -203,7 +202,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="story-text">
-                                        <h3>step six</h3>
+                                        <h3>sixth step</h3>
                                         <p>Mendapat konfirmasi diterima/tidak diterima dari tempat KP </p>
                                     </div>
                                     <div class="story-icon d-md-block d-none">
@@ -225,7 +224,7 @@
                                         <i class="fa fa-home"></i>
                                     </div>
                                     <div class="story-text">
-                                        <h3>step seven</h3>
+                                        <h3>seventh step</h3>
                                         <p>Melaporkan dan mengkonfirmasi bahwa telah diterima ke koordinator KP untuk diupdate datanya di http://mis.pens.ac.id </p>
                                     </div>
                                 </div>
@@ -251,7 +250,7 @@
 
 
 <!-- Team Start -->
-<div class="team">
+<div class="team" id="team">
     <div class="container-fluid">
         <div class="section-header">
             <h2>Our Team</h2>
@@ -365,7 +364,7 @@
 </div>
 <!-- Team End -->
 <!-- FAQs Start -->
-<div class="faqs">
+<div class="faqs" id="faq">
    <div class="container-fluid">
       <div class="row align-items-center">
          <div class="col-md-6">
@@ -430,7 +429,7 @@
 </div>
 <!-- FAQs End -->
 <!-- Contact Start -->
-<div class="contact">
+<div class="contact" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
