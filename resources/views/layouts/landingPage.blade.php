@@ -87,7 +87,7 @@
                             <h2>BRIDGE TO THE FUTURE</h2>
                         </div>
                         <div class="col-md-3">
-                            <a class="btn" href="">Contact Us</a>
+                            <a class="btn" href="#contact">Contact Us</a>
                         </div>
                     </div>
                 </div>

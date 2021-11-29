@@ -26,7 +26,7 @@
       <div class="row align-items-center">
          <div class="col-md-6">
             <div id="video-section">
-               <div class="youtube-player" data-id="jssO8-5qmag"></div>
+               <div class="youtube-player" data-id="2n10aj7xf2g"></div>
 
                <script>
                   document.addEventListener("DOMContentLoaded",
@@ -64,7 +64,6 @@
             <p>
                Kerja Praktek (KP) merupakan salah satu mata kuliah yang wajib ditempuh oleh setiap mahasiswa PENS. Kegiatan KP dilaksanakan dengan tujuan untuk memberikan wawasan dan pengalaman kerja kepada mahasiswa secara langsung di dunia industri sehingga mahasiswa mendapat kesempatan untuk melihat relevansi keilmuan yang dipelajari serta dapat mengimplementasikan keilmuan/pengetahuan yang dimilki pada permasalahan di dunia kerja
             </p>
-            <a class="btn" href="">Learn More</a>
          </div>
       </div>
    </div>
