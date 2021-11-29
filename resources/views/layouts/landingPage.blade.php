@@ -69,7 +69,7 @@
                                         <a href="#team" class="nav-item nav-link">Team</a>
                                         <a href="#faq" class="nav-item nav-link">FAQ</a>
                                         <a href="#contact" class="nav-item nav-link">Contact Us</a>
-                                        <a href="https://drive.google.com/drive/folders/1Fr4qr748Mni6OcPy5LmBim7PQiNbJDF3?usp=sharing"class="btn"><i class="fa fa-download"></i>Download Now</a>
+                                        <a href="{{ route('login') }}"class="btn"><i class=""></i>Login</a>
                                     </div>
                                 </div>
                             </div>
