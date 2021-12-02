@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class List extends Model
+class ListKp extends Model
 {
     use HasFactory;
+
+    protected $table = 'lists_kp';
     protected $fillable = [
         'name',
         'address',
@@ -16,10 +18,11 @@ class List extends Model
         'city',
         'created_by',
         'updated_by',
-        'deleted_by',
+        'deleted_by'
     ];
-    public function lists()
+
+    public function resultsKp()
     {
-        return $this->hasMany(List::class);
-    }   
+        return $this->hasMany(ResultKp::class);
+    }
 }

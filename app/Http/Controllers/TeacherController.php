@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\List;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
-class ListController extends Controller
+class TeacherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ListController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\List  $list
+     * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function show(List $list)
+    public function show(Teacher $teacher)
     {
         //
     }
@@ -52,10 +52,10 @@ class ListController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\List  $list
+     * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function edit(List $list)
+    public function edit(Teacher $teacher)
     {
         //
     }
@@ -64,10 +64,10 @@ class ListController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\List  $list
+     * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, List $list)
+    public function update(Request $request, Teacher $teacher)
     {
         //
     }
@@ -75,10 +75,10 @@ class ListController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\List  $list
+     * @param  \App\Models\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function destroy(List $list)
+    public function destroy(Teacher $teacher)
     {
         //
     }

@@ -27,6 +27,18 @@ class PermissionTableSeeder extends Seeder
             'kp-create',
             'kp-edit',
             'kp-delete',
+            'student-list',
+            'student-create',
+            'student-edit',
+            'student-delete',
+            'teacher-list',
+            'teacher-create',
+            'teacher-edit',
+            'teacher-delete',
+            'resultKp-list',
+            'resultKp-create',
+            'resultKp-edit',
+            'resultKp-delete',
         ];
 
         foreach ($permissions as $permission) {

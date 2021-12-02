@@ -15,10 +15,14 @@ class CreateResultsKpTable extends Migration
     {
         Schema::create('results_kp', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('teacher_id')->constrained();
-            $table->foreignId('student_id')->constrained();
+            $table->foreignId('teacher_id')->constrained()
+                                           ->onUpdate('cascade');
+            $table->foreignId('student_id')->constrained()
+                                           ->onUpdate('cascade');
             $table->unsignedBigInteger('list_kp_id');
-            $table->foreign('list_kp_id')->references('id')->on('lists_kp');
+            $table->foreign('list_kp_id')->references('id')
+                                         ->on('lists_kp')
+                                         ->onUpdate('cascade');
             $table->string('periode', 10);
             $table->string('status', 10);
             $table->timestamps();
