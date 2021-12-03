@@ -51,7 +51,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                    
+                                    <a href="{{ route('index') }}" class="btn btn-primary">Back to Main Page</a>
                                     <hr>
                                     
                                     <div class="text-center">

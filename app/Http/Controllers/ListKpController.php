@@ -12,9 +12,18 @@ class ListKpController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('permission:kp-list|kp-create|kp-edit|kp-delete', ['only' => ['index', 'store']]);
+        $this->middleware('permission:kp-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:kp-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:kp-delete', ['only' => ['destroy']]);
+    }
+    
     public function index()
     {
-        //
+        return view('pages.listsKp.index');
     }
 
     /**
@@ -24,7 +33,7 @@ class ListKpController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.listsKp.create');
     }
 
     /**

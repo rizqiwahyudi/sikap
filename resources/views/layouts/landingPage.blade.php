@@ -69,7 +69,20 @@
                                         <a href="#team" class="nav-item nav-link">Team</a>
                                         <a href="#faq" class="nav-item nav-link">FAQ</a>
                                         <a href="#contact" class="nav-item nav-link">Contact Us</a>
-                                        <a href="{{ route('login') }}"class="btn"><i class=""></i>Login</a>
+                                    @guest
+                                        <a href="{{ route('login') }}"class="btn">Login</a>
+                                    @else
+                                    <a href="{{ route('home') }}"class="btn">Go to Dashboard</a>
+                                        <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();"
+                                        class="btn">
+                                        {{ __('Logout') }}</a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    @endguest
                                     </div>
                                 </div>
                             </div>
