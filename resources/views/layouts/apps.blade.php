@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    @yield('css')
 
 </head>
 
@@ -72,8 +73,12 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Kerja Praktek:</h6>
-                        <a class="collapse-item" href="{{ route('lists-kp.index') }}">List KP</a>
-                        <a class="collapse-item" href="{{ route('lists-kp.create') }}">Add KP</a>
+                        @can('kp-list')
+                            <a class="collapse-item" href="{{ route('lists-kp.index') }}">List KP</a>
+                        @endcan
+                        @can('kp-create')
+                            <a class="collapse-item" href="{{ route('lists-kp.create') }}">Add KP</a>
+                        @endcan
                     </div>
                 </div>
             </li>
@@ -182,7 +187,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->username }}</span>
                                 <img class="img-profile rounded-circle"src="{{asset ('agency/img/pens.png')}}">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -209,6 +214,15 @@
                             <div class="col-md-5">
                                 
                             </div>
+                            @if($message = Session::get('success'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @elseif($message =  Session::get('error'))
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $message }}
+                                </div>
+                            @endif
                                 @yield('content')
                         </div>
         
@@ -263,7 +277,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('sb-admin2/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('sb-admin2/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -287,12 +301,8 @@
 
      <!-- Page level custom scripts -->
      <!-- <script src="{{ asset('js/demo/datatables-demo.js') }}"></script> -->
-     <script>
-         $(document).ready(function() {
-            $('#dataTable').DataTable();
-          });
-     </script>
-
+     
+     @yield('javascript')
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 @extends('../layouts.apps')
 
+@section('title', 'Dashboard')
 @section('content')
 <!-- Begin Page Content -->
 <div class="container-fluid">

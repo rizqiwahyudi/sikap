@@ -13,8 +13,11 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
+        "maatwebsite/excel": "^3.1",
+        "realrashid/sweet-alert": "^4.1",
         "sebastian/phpcpd": "^6.0",
-        "spatie/laravel-permission": "^5.3"
+        "spatie/laravel-permission": "^5.3",
+        "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
