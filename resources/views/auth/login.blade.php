@@ -70,7 +70,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a href="{{ route('index') }}" class="btn btn-primary">Back to Main Page</a>
+                                    <a href="{{ route('index') }}" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back to Home</a>
                                 
                                     <hr>
                                     <div class="text-center">

@@ -1,10 +1,10 @@
-<!-- @extends('layouts.app')
+@extends('layouts.loginAndResetPassword')
 
-@section('content') -->
+@section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-xl-8 col-lg-12 col-md-9">
+            <div class="card card o-hidden border-0 shadow-lg my-5">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -63,7 +63,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <a href="{{ route('index') }}" class="btn btn-primary"><i class="fa fa-arrow-left"></i>Back to Home</a>
+                                <button type="submit" class="btn btn-primary float-sm-right">
                                     {{ __('Register') }}
                                 </button>
                             </div>
@@ -74,4 +75,4 @@
         </div>
     </div>
 </div>
-<!-- @endsection -->
+@endsection

@@ -15,7 +15,7 @@ use App\Http\Controllers\ListKpController;
 |
 */
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 Route::get('/', function () {
     return view('index');
@@ -24,4 +24,6 @@ Route::get('/', function () {
 //Dashboard Route
 Route::get('/home',         [HomeController::class, 'index'])->name('home');
 //Lists-kp Route
-Route::resource('lists-kp', ListKpController::class);
+Route::get('/lists-kp/export',  [ListKpController::class, 'export'])->name('lists-kp.export');
+Route::post('/lists-kp/import', [ListKpController::class, 'import'])->name('lists-kp.import');
+Route::resource('lists-kp',     ListKpController::class);

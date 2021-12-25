@@ -10,6 +10,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\ListsKpImport;
 use App\Http\Requests\StoreListKpRequest;
 use App\Http\Requests\UpdateListKpRequest;
+use App\Exports\ListsKpExport;
 
 
 class ListKpController extends Controller
@@ -166,7 +167,7 @@ class ListKpController extends Controller
             'file' => 'required|mimes:csv,xls,xlsx'
         ]);
 
-        $import = Excel::import(new UsersImport, $request->file('file'));
+        $import = Excel::import(new ListsKpImport, $request->file('file'));
 
         if ($import) {
             return redirect()->route('lists-kp.index')
@@ -175,5 +176,10 @@ class ListKpController extends Controller
             return redirect()->route('lists-kp.index')
                              ->with(['error' => 'Data Gagal Diimport!']);
         }
+    }
+
+    public function export()
+    {
+        return Excel::download(new ListsKpExport, 'lists-kp.xlsx');
     }
 }

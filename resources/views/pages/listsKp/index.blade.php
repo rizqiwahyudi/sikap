@@ -15,6 +15,7 @@
                                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#import">
                                     IMPORT
                                 </button>
+                                <a href="{{ route('lists-kp.export') }}" class="btn btn-secondary btn-md">EXPORT</a>
                                 <a href="{{ route('lists-kp.create') }}" class="btn btn-primary btn-md">TAMBAH</a>
                             @endcan
                         </div>
@@ -50,7 +51,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('lists-kp.import') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
@@ -62,6 +63,11 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col">
+                                
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">

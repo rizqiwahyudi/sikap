@@ -4,6 +4,7 @@ namespace App\Imports;
 
 use App\Models\ListKp;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Illuminate\Support\Facades\Auth;
 
 class ListsKpImport implements ToModel
 {
@@ -15,11 +16,12 @@ class ListsKpImport implements ToModel
     public function model(array $row)
     {
         return new ListKp([
-            'name'        => $row['name'],
-            'address'     => $row['address'],
-            'telephone'   => $row['telephone'],
-            'postal_code' => $row['postal_code'],
-            'city'        => $row['city'],
+            'name'        => $row[0],
+            'address'     => $row[1],
+            'telephone'   => $row[2],
+            'postal_code' => $row[3],
+            'city'        => $row[4],
+            'created_by'  => Auth::user()->username
         ]);
     }
 }
