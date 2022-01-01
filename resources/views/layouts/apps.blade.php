@@ -14,15 +14,14 @@
     <!-- Custom fonts for this template-->
     <link href="{{ asset('sb-admin2/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
-      <!-- Custom styles for this page -->
+    <!-- Custom styles for this page -->
     <link href="{{ asset('sb-admin2/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
@@ -65,8 +64,7 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-building"></i>
                     <span>Kerja Praktek</span>
                 </a>
@@ -74,10 +72,10 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Kerja Praktek:</h6>
                         @can('kp-list')
-                            <a class="collapse-item" href="{{ route('lists-kp.index') }}">List KP</a>
+                        <a class="collapse-item" href="{{ route('lists-kp.index') }}">List KP</a>
                         @endcan
                         @can('kp-create')
-                            <a class="collapse-item" href="{{ route('lists-kp.create') }}">Add KP</a>
+                        <a class="collapse-item" href="{{ route('lists-kp.create') }}">Add KP</a>
                         @endcan
                     </div>
                 </div>
@@ -85,13 +83,11 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-store-alt"></i>
                     <span>Result</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Result Kerja Praktek:</h6>
                         <a class="collapse-item" href="">All Result</a>
@@ -101,18 +97,17 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href=""data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link" href="" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-users"></i>
                     <span>Users & Roles</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         @can('user-list')
-                            <a class="collapse-item" href="{{ route('users.index') }}">Users</a>
+                        <a class="collapse-item" href="{{ route('users.index') }}">Users</a>
                         @endcan
                         @can('role-list')
-                            <a class="collapse-item" href="{{ route('roles.index') }}">Roles</a>
+                        <a class="collapse-item" href="{{ route('roles.index') }}">Roles</a>
                         @endcan
                     </div>
                 </div>
@@ -145,11 +140,9 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -163,18 +156,14 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -188,14 +177,12 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->username }}</span>
-                                <img class="img-profile rounded-circle"src="{{asset ('agency/img/pens.png')}}">
+                                <img class="img-profile rounded-circle" src="{{asset ('agency/img/pens.png')}}">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -210,25 +197,25 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">    
+                <div class="container-fluid">
+                    @yield('content')
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div class="container">
-                            <div class="col-md-5">
-                                
+                            <div class="col-md-12">
                             </div>
                             @if($message = Session::get('success'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ $message }}
-                                </div>
-                            @elseif($message =  Session::get('error'))
-                                <div class="alert alert-danger" role="alert">
-                                    {{ $message }}
-                                </div>
+                            <div class="alert alert-success" role="alert">
+                                {{ $message }}
+                            </div>
+                            @elseif($message = Session::get('error'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ $message }}
+                            </div>
                             @endif
-                                @yield('content')
+
                         </div>
-        
+
                     </div>
                 </div>
 
@@ -257,8 +244,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -270,8 +256,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ route('logout') }}" 
-                        onclick="event.preventDefault();
+                    <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">Logout</a>
                 </div>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -280,7 +265,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('sb-admin2/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('sb-admin2/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -302,10 +287,10 @@
     <script src="{{ asset('sb-admin2/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('sb-admin2/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
-     <!-- Page level custom scripts -->
-     {{-- <script src="{{ asset('js/demo/datatables-demo.js') }}"></script> --}}
-     
-     @yield('javascript')
+    <!-- Page level custom scripts -->
+    {{-- <script src="{{ asset('js/demo/datatables-demo.js') }}"></script> --}}
+
+    @yield('javascript')
 </body>
 
 </html>
