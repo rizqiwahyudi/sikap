@@ -27,7 +27,7 @@
                                     <strong>Permissions:</strong><br>
                                     @if(!empty($rolePermissions))
                                         @foreach($rolePermissions as $roleAndPermission)
-                                            <label class="badge bg-light text-dark">{{ $roleAndPermission->name }},</label>
+                                            <label class="badge bg-light text-dark">{{ $roleAndPermission->name }}</label>,
                                         @endforeach
                                     @endif
                                 </div>

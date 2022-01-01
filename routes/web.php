@@ -5,6 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListKpController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\{
+    PermissionController,
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +38,5 @@ Route::resource('lists-kp',     ListKpController::class);
 Route::resource('users',        UserController::class);
 // Roles Route
 Route::resource('roles',        RoleController::class);
+// Permissions Route
+Route::resource('permissions',  PermissionController::class);

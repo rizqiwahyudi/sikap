@@ -109,6 +109,9 @@
                         @can('role-list')
                         <a class="collapse-item" href="{{ route('roles.index') }}">Roles</a>
                         @endcan
+                        @can('permission-list')
+                        <a class="collapse-item" href="{{ route('permissions.index') }}">Permissions</a>
+                        @endcan
                     </div>
                 </div>
             </li>
