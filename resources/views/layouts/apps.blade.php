@@ -104,13 +104,16 @@
                 <a class="nav-link" href=""data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-users"></i>
-                    <span>User</span>
+                    <span>Users & Roles</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Users:</h6>
-                        <a class="collapse-item" href="">Student</a>
-                        <a class="collapse-item" href="">Teacher</a>
+                        @can('user-list')
+                            <a class="collapse-item" href="{{ route('users.index') }}">Users</a>
+                        @endcan
+                        @can('role-list')
+                            <a class="collapse-item" href="{{ route('roles.index') }}">Roles</a>
+                        @endcan
                     </div>
                 </div>
             </li>
@@ -300,7 +303,7 @@
     <script src="{{ asset('sb-admin2/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
      <!-- Page level custom scripts -->
-     <!-- <script src="{{ asset('js/demo/datatables-demo.js') }}"></script> -->
+     {{-- <script src="{{ asset('js/demo/datatables-demo.js') }}"></script> --}}
      
      @yield('javascript')
 </body>

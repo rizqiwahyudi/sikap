@@ -21,7 +21,6 @@ class CreateStudentsTable extends Migration
                         ->onUpdate('cascade');
             $table->string('name', 100);
             $table->string('nrp', 20);
-            $table->string('class', 20);
             $table->timestamps();
             $table->softDeletes();
             $table->string('created_by')->nullable();

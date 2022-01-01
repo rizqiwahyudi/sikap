@@ -1,28 +1,26 @@
 @extends('layouts.apps')
 
-@section('title', 'Users Data')
+@section('title', 'Roles Data')
 @section('content')
     <div class="container" style="margin-top: 80px">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Daftar User
+                        Daftar Role
                     </div>
                     <div class="card-body">
                         <div class="button-action" style="margin-bottom: 20px">
-                        @can('user-create')
-                            <a href="{{ route('users.create') }}" class="btn btn-primary btn-md">TAMBAH</a>
+                        @can('role-create')
+                            <a href="{{ route('roles.create') }}" class="btn btn-primary btn-md">TAMBAH</a>
                         @endcan
                         </div>
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="users-table">
+                            <table class="table table-bordered" id="roles-table">
                                 <thead>
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">Username</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Role</th>
+                                    <th scope="col">name</th>
                                     <th scope="col">Action</th>
                                 </tr>
                                 </thead>
@@ -42,11 +40,11 @@
     </form>
 @section('javascript')
     <script>
-        $('#users-table').DataTable({
+        $('#roles-table').DataTable({
             processing: true,
             serverside: true,
             ajax: {
-                url: "{{ route('users.index') }}",
+                url: "{{ route('roles.index') }}",
                 type: 'GET',
             },
             "responsive": true,
@@ -55,13 +53,7 @@
                     data: 'DT_RowIndex',
                 },
                 {
-                    data: 'username',
-                },
-                {
-                    data: 'email',
-                },
-                {
-                    data: 'role',
+                    data: 'name',
                 },
                 {
                     data: 'action',
@@ -77,7 +69,7 @@
         function confirmForm(e) {
             let id = e.getAttribute('data-id');
             
-            $('#delete-form').attr('action', '/users/'+id);
+            $('#delete-form').attr('action', '/roles/'+id);
 
             if (!confirm('Anda Yakin Ingin Menghapusnya ?')) {
                 event.preventDefault();

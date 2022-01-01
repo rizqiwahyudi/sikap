@@ -3,6 +3,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListKpController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,7 @@ use App\Http\Controllers\ListKpController;
 |
 */
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/', function () {
     return view('index');
@@ -23,7 +25,13 @@ Route::get('/', function () {
 
 //Dashboard Route
 Route::get('/home',         [HomeController::class, 'index'])->name('home');
+
 //Lists-kp Route
 Route::get('/lists-kp/export',  [ListKpController::class, 'export'])->name('lists-kp.export');
 Route::post('/lists-kp/import', [ListKpController::class, 'import'])->name('lists-kp.import');
 Route::resource('lists-kp',     ListKpController::class);
+
+// Users Route
+Route::resource('users',        UserController::class);
+// Roles Route
+Route::resource('roles',        RoleController::class);
