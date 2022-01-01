@@ -14,7 +14,7 @@ class AddForeignKeyGroupLecturerPengajuanKpDanListKpToResultTabel extends Migrat
     public function up()
     {
         Schema::table('results_kp', function (Blueprint $table) {
-           $table->foreignId('group_id')->nullable()->constrained(); 
+           $table->foreignId('group_id')->constrained(); 
         });
 
         Schema::table('results_kp', function (Blueprint $table) {
