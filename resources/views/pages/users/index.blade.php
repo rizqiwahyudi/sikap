@@ -5,14 +5,14 @@
 <div class="container" style="margin-top: 80px">
     <div class="row">
         <div class="col-md-12">
-            <div class="card">
-                <div class="m-0 font-weight-bold text-primary">
-                    Daftar User
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Daftar Users</h6>
                 </div>
                 <div class="card-body">
                     <div class="button-action" style="margin-bottom: 20px">
                         @can('user-create')
-                        <a href="{{ route('users.create') }}" class="btn btn-primary btn-md">TAMBAH</a>
+                        <a href="{{ route('users.create') }}" class="btn btn-primary btn-icon-split">TAMBAH</a>
                         @endcan
                     </div>
                     <div class="table-responsive">
