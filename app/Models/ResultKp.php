@@ -11,9 +11,10 @@ class ResultKp extends Model
 
     protected $table = 'results_kp';
     protected $fillable = [
-        'teacher_id',
-        'student_id',
+        'lecturer_id',
         'list_kp_id',
+        'group_id',
+        'pengajuan_kp_id',
         'periode',
         'status',
         'created_by',
@@ -26,13 +27,18 @@ class ResultKp extends Model
         return $this->belongsTo(ListKp::class, 'list_kp_id');
     }
 
-    public function student()
+    public function lecturer()
     {
-        return $this->belongsTo(Student::class, 'student_id');
+        return $this->belongsTo(Lecturer::class, 'lecturer_id');
     }
 
-    public function teacher()
+    public function group()
     {
-        return $this->belongsTo(Teacher::class, 'teacher_id');
+        return $this->belongsTo(Group::class, 'group_id');
+    }
+
+    public function pengajuanKp()
+    {
+        return $this->belongsTo(PengajuanKp::class, 'pengajuan_kp_id');
     }
 }

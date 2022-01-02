@@ -17,8 +17,6 @@ class CreateResultsKpTable extends Migration
             $table->id();
             $table->foreignId('lecturer_id')->constrained()
                                           ->onUpdate('cascade');
-            $table->foreignId('student_id')->constrained()
-                                           ->onUpdate('cascade');
             $table->unsignedBigInteger('list_kp_id');
             $table->foreign('list_kp_id')->nullable()
                                          ->references('id')
