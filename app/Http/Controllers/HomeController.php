@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
-use App\Models\Teacher;
+use App\Models\Lecturer;
 use App\Models\ListKp;
 use App\Models\ResultKp;
 use App\Models\User;
@@ -29,12 +29,11 @@ class HomeController extends Controller
     public function index()
     {
 
-        $page = 'home';
-        $student = Student::all()->count();
-        // $teachers = Teacher::all()->count();
-        $user = User::all()->count();
+        $students = Student::all()->count();
+        $lecturers = Lecturer::all()->count();
+        $users = User::all()->count();
         $lists_kp = ListKp::all()->count();
         $resultKp = ResultKp::all()->count();
-        return view('pages.home.index', compact('page', 'student', 'user', 'lists_kp', 'resultKp'));
+        return view('pages.home.index', compact('students', 'users', 'lists_kp', 'resultKp', 'lecturers'));
     }
 }
