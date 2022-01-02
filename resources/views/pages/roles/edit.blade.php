@@ -28,7 +28,9 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <strong>Permissions : </strong>
+                                <strong>
+                                    Permissions : <input type="checkbox" id="check-all"> <label for="check-all">Select All</label>
+                                </strong>
                                 
                                 <div class="container">
                                     <span id="error" class="text-danger"></span>
@@ -69,13 +71,27 @@
 @section('javascript')
     <script>
         $(document).ready(function(){
-            $("input[type=checkbox]").change(function(){
+            $("input[name='permission[]']").change(function(){
                 let permissionChecked = $("input[name='permission[]']:checked")
 
                 if (permissionChecked.length === 0) {
                     $('#error').text('*Permission Is Required!');
                 } else {
                     $('#error').text('');
+                }
+            });
+
+            $('#check-all').click(function(event){
+                if (this.checked) {
+                    $(':checkbox').each(function() {
+                        this.checked = true;
+                        $('#error').text('');                        
+                    });
+                } else {
+                    $(':checkbox').each(function() {
+                        this.checked = false;
+                        $('#error').text('*Permission Is Required!');                       
+                    });
                 }
             });
         });
