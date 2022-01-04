@@ -24,7 +24,7 @@ class Kelas extends Model
 
     public function major()
     {
-        $this->belongsTo(Major::class, 'major_id');
+        $this->belongsTo(Major::class);
     }
 
     public function academicYears(){
