@@ -16,10 +16,6 @@ class AddForeignKeyAcademicYearToStudentsAndMajorsTabel extends Migration
         Schema::table('students', function (Blueprint $table) {
            $table->foreignId('academic_year_id')->constrained();
         });
-
-        Schema::table('majors', function (Blueprint $table) {
-            $table->foreignId('academic_year_id')->constrained();
-        });
     }
 
     /**
@@ -30,10 +26,6 @@ class AddForeignKeyAcademicYearToStudentsAndMajorsTabel extends Migration
     public function down()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->dropColumn('academic_year_id');
-        });
-
-        Schema::table('majors', function (Blueprint $table) {
             $table->dropColumn('academic_year_id');
         });
     }

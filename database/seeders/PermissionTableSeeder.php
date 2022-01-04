@@ -43,6 +43,18 @@ class PermissionTableSeeder extends Seeder
             'permission-create',
             'permission-edit',
             'permission-delete',
+            'academic-year-list',
+            'academic-year-create',
+            'academic-year-edit',
+            'academic-year-delete',
+            'major-list',
+            'major-create',
+            'major-edit',
+            'major-delete',
+            'kelas-list',
+            'kelas-create',
+            'kelas-edit',
+            'kelas-delete',
         ];
 
         foreach ($permissions as $permission) {

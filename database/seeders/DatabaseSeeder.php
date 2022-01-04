@@ -18,7 +18,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CreateRoleSeeder::class,
             PermissionTableSeeder::class,
+            CreateAcademicYearSeeder::class,
+            CreateMajorSeeder::class,
+            CreateKelasSeeder::class,
+            CreateGroupSeeder::class,
             CreateAdminUserSeeder::class,
+            CreateUserSeeder::class,
         ]);
     }
 }

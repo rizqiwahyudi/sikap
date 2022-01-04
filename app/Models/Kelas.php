@@ -12,17 +12,22 @@ class Kelas extends Model
     protected $table = 'kelas';
 
     protected $fillable = [
-        'name',
         'major_id',
+        'kelas',
+        'sub_kelas',
     ];
+
+    public function students()
+    {
+        $this->hasMany(Student::class, 'kelas_id');
+    }
 
     public function major()
     {
         $this->belongsTo(Major::class, 'major_id');
     }
 
-    public function students()
-    {
-        $this->hasMany(Student::class, 'kelas_id');
+    public function academicYears(){
+        return $this->belongsToMany(AcademicYear::class);
     }
 }

@@ -12,7 +12,6 @@ class Major extends Model
     protected $fillable = [
         'name',
         'description',
-        'academic_year_id',
     ];
 
     public function students()
@@ -22,11 +21,6 @@ class Major extends Model
 
     public function kelas()
     {
-        $this->hasMany(Kelas::class, 'kelas_id');
-    }
-
-    public function academicYear()
-    {
-        $this->belongsTo(AcademicYear::class, 'academic_year_id');
+        $this->hasMany(Kelas::class, 'major_id');
     }
 }

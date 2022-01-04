@@ -15,7 +15,9 @@ class CreateKelasTable extends Migration
     {
         Schema::create('kelas', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 50);
+            $table->foreignId('major_id')->constrained();
+            $table->string('kelas', 100)->nullable();
+            $table->string('sub_kelas', 100)->nullable();
             $table->timestamps();
         });
     }

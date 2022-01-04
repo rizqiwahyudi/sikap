@@ -119,6 +119,27 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
+            @if (Auth::user()->hasRole('admin'))
+                <li class="nav-item active">
+                    <a class="nav-link" href="" data-toggle="collapse" data-target="#dropdownSetting" aria-expanded="true" aria-controls="dropdownSetting">
+                        <i class="fas fa-gears"></i>
+                        <span>Settings</span>
+                    </a>
+                    <div id="dropdownSetting" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            @can('academic-year-list')
+                            <a class="collapse-item" href="{{ route('academic-years.index') }}">Academic Year Setting</a>
+                            @endcan
+                            @can('major-list')
+                            <a class="collapse-item" href="{{ route('majors.index') }}">Major Setting</a>
+                            @endcan
+                            @can('kelas-list')
+                            <a class="collapse-item" href="{{ route('kelas.index') }}">Kelas Setting</a>
+                            @endcan
+                        </div>
+                    </div>
+                </li>
+            @endif
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>

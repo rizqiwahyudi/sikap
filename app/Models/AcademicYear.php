@@ -19,7 +19,7 @@ class AcademicYear extends Model
         return $this->hasMany(Student::class, 'academic_year_id');
     }
 
-    public function majors(){
-        return $this->hasMany(Major::class, 'academic_year_id');
+    public function kelas(){
+        return $this->belongsToMany(Kelas::class, 'academic_year_kelas', 'kelas_id', 'academic_year_id');
     }
 }

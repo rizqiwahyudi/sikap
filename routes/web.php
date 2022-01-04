@@ -7,6 +7,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\{
     PermissionController,
+    AcademicYearController,
+    MajorController,
+    KelasController
 };
 
 /*
@@ -27,16 +30,22 @@ Route::get('/', function () {
 })->name('index');
 
 //Dashboard Route
-Route::get('/home',         [HomeController::class, 'index'])->name('home');
+Route::get('/home',                 [HomeController::class, 'index'])->name('home');
 
 //Lists-kp Route
-Route::get('/lists-kp/export',  [ListKpController::class, 'export'])->name('lists-kp.export');
-Route::post('/lists-kp/import', [ListKpController::class, 'import'])->name('lists-kp.import');
-Route::resource('lists-kp',     ListKpController::class);
+Route::get('/lists-kp/export',      [ListKpController::class, 'export'])->name('lists-kp.export');
+Route::post('/lists-kp/import',     [ListKpController::class, 'import'])->name('lists-kp.import');
+Route::resource('lists-kp',         ListKpController::class);
 
 // Users Route
-Route::resource('users',        UserController::class);
+Route::resource('users',            UserController::class);
 // Roles Route
-Route::resource('roles',        RoleController::class);
+Route::resource('roles',            RoleController::class);
 // Permissions Route
-Route::resource('permissions',  PermissionController::class);
+Route::resource('permissions',      PermissionController::class);
+// Academic Years Route
+Route::resource('academic-years',   AcademicYearController::class);
+// Majors Route
+Route::resource('majors',           MajorController::class);
+// Kelas Route
+Route::resource('kelas',            KelasController::class);
