@@ -10,6 +10,10 @@
                     Tambah Kelas
                 </div>
                 <div class="card-body">
+                    <div class="button-action" style="margin-bottom: 20px">
+                        <a href="{{ route('kelas.index') }}" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i> Kembali</a>
+                    </div>
+
                     <form action="{{ route('kelas.store') }}" method="POST">
                         @csrf
                         <div class="form-group">

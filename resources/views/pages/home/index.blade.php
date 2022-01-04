@@ -20,7 +20,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Total students</div>
+                                Total Mahasiswa</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{number_format($students)}}</div>
                         </div>
                         <div class="col-auto">
@@ -38,7 +38,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Total Lecturers</div>
+                                Total Dosen</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{number_format($lecturers)}}</div>
                         </div>
                         <div class="col-auto">

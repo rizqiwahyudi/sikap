@@ -29,6 +29,10 @@
             <h6 class="m-0 font-weight-bold text-primary">Show User</h6>
         </div>
         <div class="card-body">
+            <div class="button-action" style="margin-bottom: 20px">
+                <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i> Kembali</a>
+            </div>
+            
             <div class="avatar">
                 <img src="/img/avatar.png" alt="">
             </div>

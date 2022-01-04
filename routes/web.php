@@ -9,7 +9,7 @@ use App\Http\Controllers\{
     PermissionController,
     AcademicYearController,
     MajorController,
-    KelasController
+    KelasController,
 };
 
 /*

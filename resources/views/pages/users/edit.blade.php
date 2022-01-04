@@ -10,6 +10,10 @@
                     Edit User
                 </div>
                 <div class="card-body">
+                    <div class="button-action" style="margin-bottom: 20px">
+                        <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i> Kembali</a>
+                    </div>
+                    
                     <form action="{{ route('users.update', [$user->id]) }}" method="POST">
                         @csrf
                         @method('PUT')

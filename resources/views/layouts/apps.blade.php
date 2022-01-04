@@ -72,10 +72,10 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Kerja Praktek:</h6>
                         @can('kp-list')
-                        <a class="collapse-item" href="{{ route('lists-kp.index') }}">List KP</a>
+                        <a class="collapse-item" href="{{ route('lists-kp.index') }}">List Tempat KP</a>
                         @endcan
                         @can('kp-create')
-                        <a class="collapse-item" href="{{ route('lists-kp.create') }}">Add KP</a>
+                        <a class="collapse-item" href="{{ route('lists-kp.create') }}">Create Tempat KP</a>
                         @endcan
                     </div>
                 </div>

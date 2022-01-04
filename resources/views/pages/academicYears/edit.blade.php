@@ -10,6 +10,10 @@
                     Edit Tahun Akademik
                 </div>
                 <div class="card-body">
+                    <div class="button-action" style="margin-bottom: 20px">
+                        <a href="{{ route('academic-years.index') }}" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i> Kembali</a>
+                    </div>
+
                     <form action="{{ route('academic-years.update', [$academic_year]) }}" method="POST">
                         @csrf
                         @method('PUT')
