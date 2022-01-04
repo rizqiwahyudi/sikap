@@ -222,25 +222,25 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    @yield('content')
-                    <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <div class="container">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
+                                @if($message = Session::get('success'))
+                                <div class="alert alert-success  alert-block" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert">x</button>
+                                    <strong>{{ $message }}</strong>
+                                </div>
+                                @elseif($message = Session::get('error'))
+                                <div class="alert alert-danger  alert-block" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert">x</button>
+                                    <strong>{{ $message }} </strong>
+                                </div>
+                                @endif
                             </div>
-                            @if($message = Session::get('success'))
-                            <div class="alert alert-success" role="alert">
-                                {{ $message }}
-                            </div>
-                            @elseif($message = Session::get('error'))
-                            <div class="alert alert-danger" role="alert">
-                                {{ $message }}
-                            </div>
-                            @endif
-
                         </div>
-
                     </div>
+                    @yield('content')
+                    <!-- Page Heading -->
                 </div>
 
             </div>
@@ -281,7 +281,7 @@
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">Logout</a>
+                                document.getElementById('logout-form').submit();">Logout</a>
                 </div>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
